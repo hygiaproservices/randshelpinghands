@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Enquiry, Booking } from "@prisma/client";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,14 +30,14 @@ async function getStats() {
   return { newEnquiries, upcomingBookings, totalClients, pendingTestimonials };
 }
 
-async function getRecentEnquiries() {
+async function getRecentEnquiries(): Promise<Enquiry[]> {
   return prisma.enquiry.findMany({
     orderBy: { createdAt: "desc" },
     take: 5,
   });
 }
 
-async function getUpcomingBookings() {
+async function getUpcomingBookings(): Promise<Booking[]> {
   return prisma.booking.findMany({
     where: { preferredDate: { gte: new Date() } },
     orderBy: { preferredDate: "asc" },
