@@ -45,11 +45,9 @@ async function getUpcomingBookings() {
 }
 
 export default async function DashboardPage() {
-  const [stats, recentEnquiries, upcomingBookings] = await Promise.all([
-    getStats(),
-    getRecentEnquiries(),
-    getUpcomingBookings(),
-  ]);
+  const stats = await getStats();
+  const recentEnquiries = await getRecentEnquiries();
+  const upcomingBookings = await getUpcomingBookings();
 
   const statCards = [
     {
