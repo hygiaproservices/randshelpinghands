@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { APP_NAME } from "@/lib/consts";
+import { APP_NAME, CONTACT } from "@/lib/consts";
 import type { EnquiryFormValues } from "@/lib/schemas/enquiry-schema";
 import type { BookingFormValues } from "@/lib/schemas/booking-schema";
 
