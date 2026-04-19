@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Ruby and R&S Helping Hands — over 3 years of companionship care experience for older adults in Liverpool.",
+    "Learn about R&S Helping Hands — 5 years of hands-on companionship care experience for older adults in Liverpool.",
 };
 
 const CREDENTIALS = [
@@ -25,7 +25,7 @@ const CREDENTIALS = [
   },
   {
     icon: <Clock className="size-5" />,
-    label: "3+ Years Experience",
+    label: "5+ Years Experience",
     description: "Hands-on care experience and team leadership",
   },
   {
@@ -65,7 +65,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Ruby's Story */}
+      {/* Our Story */}
       <section className="bg-surface-container-low px-6 py-24">
         <div className="mx-auto max-w-4xl">
           <div className="grid items-start gap-12 md:grid-cols-5">
@@ -73,11 +73,15 @@ export default function AboutPage() {
             <div className="flex items-center justify-center md:col-span-2">
               <div className="rounded-lg bg-surface-container-lowest p-12 text-center">
                 <div className="mx-auto flex size-36 items-center justify-center rounded-full bg-primary/10">
-                  <span className="font-heading text-5xl text-primary">R</span>
+                  <span className="font-heading text-4xl text-primary">
+                    R&S
+                  </span>
                 </div>
-                <p className="mt-6 font-heading text-lg font-semibold">Ruby</p>
+                <p className="mt-6 font-heading text-lg font-semibold">
+                  R&S Helping Hands
+                </p>
                 <p className="text-sm text-muted-foreground">
-                  Founder & Companion
+                  Founders & Companions
                 </p>
               </div>
             </div>
@@ -85,26 +89,27 @@ export default function AboutPage() {
             {/* Story */}
             <div className="space-y-6 md:col-span-3">
               <h2 className="font-heading text-[1.75rem] leading-tight tracking-tight">
-                My Story
+                Our Story
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Hello, my name is Ruby. I provide kind, reliable companionship
+                  At R&S Helping Hands, we provide kind, reliable companionship
                   for older adults in {SERVICE_AREA}, offering support that
                   helps them feel less alone and more confident living in their
                   own home.
                 </p>
                 <p>
-                  With over 3 years of care experience and team leadership, I
-                  bring both compassion and professional understanding to every
-                  visit. I&apos;ve worked alongside healthcare teams, supported
-                  families through difficult transitions, and learned that the
-                  smallest acts of kindness often make the biggest difference.
+                  With 5 years of hands-on care experience and team leadership,
+                  we bring both compassion and professional understanding to
+                  every visit. We&apos;ve worked alongside healthcare teams,
+                  supported families through difficult transitions, and learned
+                  that the smallest acts of kindness often make the biggest
+                  difference.
                 </p>
                 <p>
-                  I understand how important it is to feel safe, respected, and
+                  We understand how important it is to feel safe, respected, and
                   listened to. Whether it&apos;s a cup of tea and a chat, help
-                  with shopping, or a walk in the park, I&apos;m there to make
+                  with shopping, or a walk in the park, we&apos;re there to make
                   each day a little brighter.
                 </p>
               </div>
@@ -123,7 +128,7 @@ export default function AboutPage() {
             More Than Just a Service
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
-            My goal is to provide not just help, but genuine companionship and
+            Our goal is to provide not just help, but genuine companionship and
             peace of mind for both clients and their families. Everyone deserves
             to feel valued, heard, and cared for — and that&apos;s what{" "}
             {APP_NAME} is all about.
@@ -170,18 +175,22 @@ export default function AboutPage() {
             Ready to Chat?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            I&apos;d love to hear from you. No pressure, just a friendly
-            conversation about how I can help.
+            We&apos;d love to hear from you. No pressure, just a friendly
+            conversation about how we can help.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Button size="lg" render={<Link href="/book-a-visit" />}>
+            <Button
+              size="lg"
+              nativeButton={false}
+              render={<Link href="/book-a-visit" />}>
               Book a Free Visit
             </Button>
             <Button
               variant="outline"
               size="lg"
+              nativeButton={false}
               render={<Link href="/contact" />}>
-              Contact Me
+              Contact Us
             </Button>
           </div>
         </div>

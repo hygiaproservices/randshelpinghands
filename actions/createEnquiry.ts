@@ -2,6 +2,10 @@
 
 import { prisma } from "@/lib/prisma";
 import { enquirySchema } from "@/lib/schemas/enquiry-schema";
+import {
+  sendEnquiryNotification,
+  sendEnquiryConfirmation,
+} from "@/lib/services/email.service";
 
 export async function createEnquiry(formData: FormData) {
   const raw = {
@@ -24,6 +28,12 @@ export async function createEnquiry(formData: FormData) {
   await prisma.enquiry.create({
     data: result.data,
   });
+
+  // Send emails (non-blocking — don't fail the form if email fails)
+  await Promise.allSettled([
+    sendEnquiryNotification(result.data),
+    sendEnquiryConfirmation(result.data),
+  ]);
 
   return { success: true as const };
 }

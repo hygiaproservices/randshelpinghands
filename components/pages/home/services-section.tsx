@@ -41,7 +41,10 @@ export function ServicesSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button variant="outline" render={<Link href="/services" />}>
+          <Button
+            variant="outline"
+            nativeButton={false}
+            render={<Link href="/services" />}>
             View All Services
           </Button>
         </div>

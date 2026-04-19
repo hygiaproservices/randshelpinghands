@@ -81,7 +81,7 @@ export default function BookAVisitPage() {
                     2
                   </span>
                   <p className="text-sm text-muted-foreground">
-                    Ruby will visit for a friendly, no-pressure introduction
+                    We&apos;ll visit for a friendly, no-pressure introduction
                   </p>
                 </li>
                 <li className="flex items-start gap-3">
@@ -120,7 +120,7 @@ export default function BookAVisitPage() {
                 <div>
                   <p className="text-sm font-semibold">Your Safety Matters</p>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Ruby is fully DBS checked with over 3 years of professional
+                    Our team is fully DBS checked with 5 years of professional
                     care experience.
                   </p>
                 </div>

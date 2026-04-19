@@ -23,12 +23,16 @@ export function HeroSection() {
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Button size="lg" render={<Link href="/book-a-visit" />}>
+          <Button
+            size="lg"
+            nativeButton={false}
+            render={<Link href="/book-a-visit" />}>
             Book a Free Visit
           </Button>
           <Button
             variant="secondary"
             size="lg"
+            nativeButton={false}
             render={<Link href="/services" />}>
             Our Services
           </Button>
@@ -42,7 +46,7 @@ export function HeroSection() {
           </span>
           <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
             <span className="size-1.5 rounded-full bg-secondary" />
-            3+ Years Experience
+            5+ Years Experience
           </span>
           <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
             <span className="size-1.5 rounded-full bg-primary" />

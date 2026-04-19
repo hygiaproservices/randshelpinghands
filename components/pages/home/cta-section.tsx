@@ -16,10 +16,17 @@ export function CtaSection() {
           we can help you or your loved one.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Button size="lg" render={<Link href="/book-a-visit" />}>
+          <Button
+            size="lg"
+            nativeButton={false}
+            render={<Link href="/book-a-visit" />}>
             Book a Free Visit
           </Button>
-          <Button variant="outline" size="lg" render={<Link href="/contact" />}>
+          <Button
+            variant="outline"
+            size="lg"
+            nativeButton={false}
+            render={<Link href="/contact" />}>
             Get in Touch
           </Button>
         </div>

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | R&S Helping Hands",
   },
   description:
-    "Kind, reliable companionship for older adults in Liverpool. Over 3 years of hands-on care experience. DBS checked. Friendly visits, shopping help, accompaniment, and more.",
+    "Kind, reliable companionship for older adults in Liverpool. 5 years of hands-on care experience. DBS checked. Friendly visits, shopping help, accompaniment, and more.",
   keywords: [
     "companionship Liverpool",
     "elderly care Liverpool",

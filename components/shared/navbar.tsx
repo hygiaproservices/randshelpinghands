@@ -45,7 +45,10 @@ export function Navbar() {
         {/* Desktop Actions */}
         <div className="hidden items-center gap-2 md:flex">
           <ThemeToggle />
-          <Button size="sm" render={<a href={CONTACT.PHONE_HREF} />}>
+          <Button
+            size="sm"
+            nativeButton={false}
+            render={<a href={CONTACT.PHONE_HREF} />}>
             <Phone className="size-3.5" data-icon="inline-start" />
             Call Us
           </Button>
@@ -87,6 +90,7 @@ export function Navbar() {
                 <div className="mt-4">
                   <Button
                     className="w-full"
+                    nativeButton={false}
                     render={<a href={CONTACT.PHONE_HREF} />}>
                     <Phone className="size-4" data-icon="inline-start" />
                     Call Us

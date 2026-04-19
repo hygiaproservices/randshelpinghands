@@ -2,6 +2,10 @@
 
 import { prisma } from "@/lib/prisma";
 import { bookingSchema } from "@/lib/schemas/booking-schema";
+import {
+  sendBookingNotification,
+  sendBookingConfirmation,
+} from "@/lib/services/email.service";
 
 export async function createBooking(formData: FormData) {
   const raw = {
@@ -30,6 +34,12 @@ export async function createBooking(formData: FormData) {
       preferredDate: new Date(result.data.preferredDate),
     },
   });
+
+  // Send emails (non-blocking — don't fail the form if email fails)
+  await Promise.allSettled([
+    sendBookingNotification(result.data),
+    sendBookingConfirmation(result.data),
+  ]);
 
   return { success: true as const };
 }

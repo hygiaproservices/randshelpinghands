@@ -9,8 +9,8 @@ export const CONTACT = {
   PHONE_HREF: "tel:+447780346808",
   WHATSAPP: "447780346808",
   WHATSAPP_HREF: "https://wa.me/447780346808",
-  EMAIL: "rubybenjaminaboh@gmail.com",
-  EMAIL_HREF: "mailto:rubybenjaminaboh@gmail.com",
+  EMAIL: "support@randshelpinghands.co.uk",
+  EMAIL_HREF: "mailto:support@randshelpinghands.co.uk",
 } as const;
 
 export const SERVICE_AREA = "Liverpool";
@@ -43,7 +43,7 @@ export const SERVICES = [
 ] as const;
 
 export const VALUE_PROPOSITIONS = [
-  "Over 3 years hands-on care",
+  "5 years hands-on care",
   "DBS checked",
   "Reliable, patient, and compassionate",
   "One-to-one personalised support",

@@ -113,6 +113,7 @@ export default async function DashboardPage() {
             <Button
               variant="ghost"
               size="sm"
+              nativeButton={false}
               render={<Link href="/enquiries" />}>
               View all
               <ArrowRight className="ml-1 size-3.5" />
@@ -157,6 +158,7 @@ export default async function DashboardPage() {
             <Button
               variant="ghost"
               size="sm"
+              nativeButton={false}
               render={<Link href="/bookings" />}>
               View all
               <ArrowRight className="ml-1 size-3.5" />

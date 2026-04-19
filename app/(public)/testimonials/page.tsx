@@ -14,21 +14,21 @@ const TESTIMONIALS = [
     name: "Margaret T.",
     relationship: "Daughter of client",
     content:
-      "Ruby is wonderful. She brightens up my mum's week with her visits. Always cheerful, patient, and so kind. We feel so much relief knowing she's there.",
+      "The team is wonderful. They brighten up my mum's week with their visits. Always cheerful, patient, and so kind. We feel so much relief knowing they're there.",
     rating: 5,
   },
   {
     name: "David & Karen P.",
     relationship: "Son & daughter-in-law",
     content:
-      "Finding Ruby was a blessing. Dad looks forward to their walks together and actually gets excited about her visits. That means the world to us.",
+      "Finding R&S Helping Hands was a blessing. Dad looks forward to their walks together and actually gets excited about the visits. That means the world to us.",
     rating: 5,
   },
   {
     name: "Joan S.",
     relationship: "Client",
     content:
-      "I was nervous about having someone new in my home, but Ruby put me at ease straight away. She treats me like a friend, not a client.",
+      "I was nervous about having someone new in my home, but the team put me at ease straight away. They treat me like a friend, not a client.",
     rating: 5,
   },
   {
@@ -42,14 +42,14 @@ const TESTIMONIALS = [
     name: "James H.",
     relationship: "Son of client",
     content:
-      "Mum's demeanour has completely changed since Ruby started visiting. She's more talkative, more engaged. We can't thank Ruby enough.",
+      "Mum's demeanour has completely changed since R&S started visiting. She's more talkative, more engaged. We can't thank them enough.",
     rating: 5,
   },
   {
     name: "Patricia L.",
     relationship: "Client",
     content:
-      "Ruby always remembers the little things — my favourite biscuits, which programmes I like. It's those details that show she genuinely cares.",
+      "The team always remembers the little things — my favourite biscuits, which programmes I like. It's those details that show they genuinely care.",
     rating: 5,
   },
 ];
@@ -116,7 +116,10 @@ export default function TestimonialsPage() {
             companionship.
           </p>
           <div className="mt-8">
-            <Button size="lg" render={<Link href="/book-a-visit" />}>
+            <Button
+              size="lg"
+              nativeButton={false}
+              render={<Link href="/book-a-visit" />}>
               Book a Free Visit
             </Button>
           </div>

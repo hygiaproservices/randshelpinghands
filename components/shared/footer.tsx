@@ -50,7 +50,7 @@ export function Footer() {
               </a>
               <a
                 href={CONTACT.EMAIL_HREF}
-                className="text-sm text-foreground/80 transition-colors hover:text-primary">
+                className="break-all text-sm text-foreground/80 transition-colors hover:text-primary">
                 {CONTACT.EMAIL}
               </a>
               <a
@@ -73,7 +73,7 @@ export function Footer() {
                 DBS Checked
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-3 py-1.5 text-xs font-medium text-secondary">
-                3+ Years Experience
+                5+ Years Experience
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary">
                 Serving {SERVICE_AREA}

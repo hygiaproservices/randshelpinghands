@@ -22,10 +22,24 @@ const auth = betterAuth({
 async function seed() {
   console.log("Seeding admin user...");
 
+  const email = "ruby.benjaminaboh@randshelpinghands.co.uk";
+
+  // Check if user already exists
+  const existing = await prisma.user.findFirst({ where: { email } });
+  if (existing) {
+    console.log(`User already exists: ${email} — updating role to CRIMSON`);
+    await prisma.user.update({
+      where: { id: existing.id },
+      data: { role: "CRIMSON" },
+    });
+    console.log("Done.");
+    process.exit(0);
+  }
+
   const user = await auth.api.signUpEmail({
     body: {
       name: "Ruby Benjamin-Aboh",
-      email: "rubybenjaminaboh@gmail.com",
+      email,
       password: "Randshelping2025!",
     },
   });

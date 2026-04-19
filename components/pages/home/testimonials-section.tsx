@@ -4,19 +4,19 @@ const FEATURED_TESTIMONIALS = [
   {
     name: "Margaret T.",
     content:
-      "Ruby is wonderful. She brightens up my mum's week with her visits. Always cheerful, patient, and so kind. We feel so much relief knowing she's there.",
+      "The team is wonderful. They brighten up my mum's week with their visits. Always cheerful, patient, and so kind. We feel so much relief knowing they're there.",
     rating: 5,
   },
   {
     name: "David & Karen P.",
     content:
-      "Finding Ruby was a blessing. Dad looks forward to their walks together and actually gets excited about her visits. That means the world to us.",
+      "Finding R&S Helping Hands was a blessing. Dad looks forward to their walks together and actually gets excited about the visits. That means the world to us.",
     rating: 5,
   },
   {
     name: "Joan S.",
     content:
-      "I was nervous about having someone new in my home, but Ruby put me at ease straight away. She treats me like a friend, not a client.",
+      "I was nervous about having someone new in my home, but the team put me at ease straight away. They treat me like a friend, not a client.",
     rating: 5,
   },
 ];
