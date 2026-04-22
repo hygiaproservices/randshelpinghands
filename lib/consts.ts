@@ -5,8 +5,8 @@
 export const APP_NAME = "R&S Helping Hands";
 
 export const CONTACT = {
-  PHONE: "07780346808",
-  PHONE_HREF: "tel:+447780346808",
+  PHONE: "07749760742",
+  PHONE_HREF: "tel:+447749760742",
   WHATSAPP: "447780346808",
   WHATSAPP_HREF: "https://wa.me/447780346808",
   EMAIL: "support@randshelpinghands.co.uk",
@@ -55,7 +55,6 @@ export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Testimonials", href: "/testimonials" },
   { label: "Contact", href: "/contact" },
   { label: "Book a Visit", href: "/book-a-visit" },
 ] as const;

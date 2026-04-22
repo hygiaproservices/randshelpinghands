@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -7,7 +8,6 @@ import {
   MessageSquare,
   CalendarCheck,
   Users,
-  Star,
   Settings,
   ChevronLeft,
   ChevronRight,
@@ -28,7 +28,6 @@ const SIDEBAR_LINKS = [
   { label: "Enquiries", href: "/enquiries", icon: MessageSquare },
   { label: "Bookings", href: "/bookings", icon: CalendarCheck },
   { label: "Clients", href: "/clients", icon: Users },
-  { label: "Testimonials", href: "/testimonials-manage", icon: Star },
   { label: "Settings", href: "/settings", icon: Settings },
 ] as const;
 
@@ -40,15 +39,19 @@ export function Sidebar() {
     <aside
       className={cn(
         "sticky top-0 z-40 flex h-screen flex-col bg-surface-container-lowest transition-[width] duration-200",
-        collapsed ? "w-[68px]" : "w-60",
+        collapsed ? "w-17" : "w-60",
       )}>
       {/* Brand */}
       <div className="flex h-16 items-center gap-2 px-4">
         {!collapsed && (
-          <Link
-            href="/dashboard"
-            className="font-heading text-lg font-semibold tracking-tight text-primary">
-            {APP_NAME}
+          <Link href="/dashboard" aria-label={APP_NAME}>
+            <Image
+              src="/logo_transparent.png"
+              alt="R&S Helping Hands logo"
+              width={140}
+              height={48}
+              className="h-10 w-auto"
+            />
           </Link>
         )}
       </div>

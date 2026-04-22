@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -16,12 +17,20 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-surface-bright/70 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="font-heading text-xl font-semibold tracking-tight text-primary">
-            {APP_NAME}
-          </span>
+        <Link
+          href="/"
+          className="flex items-center gap-3"
+          aria-label={APP_NAME}>
+          <Image
+            src="/logo_transparent.png"
+            alt="R&S Helping Hands logo"
+            width={132}
+            height={44}
+            className="h-12 w-auto origin-left scale-125 md:h-14"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

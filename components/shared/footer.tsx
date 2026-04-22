@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Heart } from "lucide-react";
 import { APP_NAME, CONTACT, NAV_LINKS, SERVICE_AREA } from "@/lib/consts";
@@ -11,9 +12,13 @@ export function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <span className="font-heading text-xl font-semibold text-primary">
-              {APP_NAME}
-            </span>
+            <Image
+              src="/logo_transparent.png"
+              alt="R&S Helping Hands logo"
+              width={168}
+              height={56}
+              className="h-12 w-auto"
+            />
             <p className="text-sm leading-relaxed text-muted-foreground">
               Kind, reliable companionship for older adults in {SERVICE_AREA}.
               Helping them feel less alone and more confident at home.

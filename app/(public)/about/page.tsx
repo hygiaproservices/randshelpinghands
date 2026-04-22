@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -14,7 +15,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about R&S Helping Hands — 5 years of hands-on companionship care experience for older adults in Liverpool.",
+    "Learn about R&S Helping Hands and our compassion-led approach to one-to-one companionship and support in Liverpool.",
 };
 
 const CREDENTIALS = [
@@ -69,14 +70,17 @@ export default function AboutPage() {
       <section className="bg-surface-container-low px-6 py-24">
         <div className="mx-auto max-w-4xl">
           <div className="grid items-start gap-12 md:grid-cols-5">
-            {/* Photo placeholder */}
+            {/* Brand */}
             <div className="flex items-center justify-center md:col-span-2">
               <div className="rounded-lg bg-surface-container-lowest p-12 text-center">
-                <div className="mx-auto flex size-36 items-center justify-center rounded-full bg-primary/10">
-                  <span className="font-heading text-4xl text-primary">
-                    R&S
-                  </span>
-                </div>
+                <Image
+                  src="/logo_transparent.png"
+                  alt="R&S Helping Hands logo"
+                  width={180}
+                  height={180}
+                  className="mx-auto h-auto w-40"
+                  priority
+                />
                 <p className="mt-6 font-heading text-lg font-semibold">
                   R&S Helping Hands
                 </p>
@@ -93,24 +97,28 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  At R&S Helping Hands, we provide kind, reliable companionship
-                  for older adults in {SERVICE_AREA}, offering support that
-                  helps them feel less alone and more confident living in their
-                  own home.
+                  At R&S Helping Hands, everything we do is rooted in
+                  compassion, dignity, and a deep respect for every
+                  individual&apos;s independence and story.
                 </p>
                 <p>
-                  With 5 years of hands-on care experience and team leadership,
-                  we bring both compassion and professional understanding to
-                  every visit. We&apos;ve worked alongside healthcare teams,
-                  supported families through difficult transitions, and learned
-                  that the smallest acts of kindness often make the biggest
-                  difference.
+                  As student nurses, we have had the privilege of supporting a
+                  wide range of individuals. Alongside this, we bring over five
+                  years of hands-on experience in the care sector, where we have
+                  seen first-hand the quiet struggles many elderly and
+                  vulnerable people face each day.
                 </p>
                 <p>
-                  We understand how important it is to feel safe, respected, and
-                  listened to. Whether it&apos;s a cup of tea and a chat, help
-                  with shopping, or a walk in the park, we&apos;re there to make
-                  each day a little brighter.
+                  We have seen what it means to feel alone in a place that
+                  should feel like home, to go without meaningful conversation,
+                  and to receive support that meets physical needs but overlooks
+                  emotional ones. These experiences stayed with us and shaped
+                  our purpose.
+                </p>
+                <p>
+                  We began to recognise a pattern: many individuals are living
+                  alone, often distanced from family, carrying a loneliness that
+                  is rarely spoken about and too often left unaddressed.
                 </p>
               </div>
             </div>
@@ -125,13 +133,15 @@ export default function AboutPage() {
             Our Mission
           </p>
           <h2 className="mt-4 font-heading text-[2rem] leading-tight tracking-tight md:text-[2.5rem]">
-            More Than Just a Service
+            Why We Exist
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
-            Our goal is to provide not just help, but genuine companionship and
-            peace of mind for both clients and their families. Everyone deserves
-            to feel valued, heard, and cared for — and that&apos;s what{" "}
-            {APP_NAME} is all about.
+            {APP_NAME} was created to offer something more. We provide
+            personalised one-to-one companionship and support that is centred
+            not just on what someone needs, but on who they are. We take the
+            time to build trust, to understand each individual, and to create
+            meaningful moments through conversation, shared activities, or
+            simply being present.
           </p>
         </div>
       </section>
@@ -141,11 +151,18 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-              Credentials
+              Our Promise
             </p>
             <h2 className="mt-4 font-heading text-[2rem] leading-tight tracking-tight">
-              Trust & Expertise
+              Accessible, Affordable, High Standard Care
             </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-muted-foreground">
+              We are deeply committed to keeping our services accessible and
+              affordable, without compromising on quality. We believe true
+              support goes beyond assistance. It is about presence, connection,
+              and the reassurance that no one feels overlooked, unheard, or
+              forgotten.
+            </p>
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -175,8 +192,9 @@ export default function AboutPage() {
             Ready to Chat?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            We&apos;d love to hear from you. No pressure, just a friendly
-            conversation about how we can help.
+            We&apos;d love to hear from you. No pressure, just a warm and friendly
+            conversation about how we can support you or someone you care about
+            in {SERVICE_AREA}.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button
