@@ -117,8 +117,8 @@ The following must be prominently displayed on the public site:
 
 The platform must display and link to:
 
-- **Phone:** 07780346808
-- **WhatsApp:** 07780346808 (with click-to-chat link)
+- **Phone:** 07749760742
+- **WhatsApp:** 07749760742 (with click-to-chat link)
 - **Email:** rubybenjaminaboh@gmail.com
 
 ## 9. Public Website Pages

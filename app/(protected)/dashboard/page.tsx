@@ -8,7 +8,6 @@ import {
   MessageSquare,
   CalendarCheck,
   Users,
-  Star,
   ArrowRight,
 } from "lucide-react";
 
@@ -17,17 +16,15 @@ export const metadata: Metadata = {
 };
 
 async function getStats() {
-  const [newEnquiries, upcomingBookings, totalClients, pendingTestimonials] =
-    await Promise.all([
-      prisma.enquiry.count({ where: { status: "NEW" } }),
-      prisma.booking.count({
-        where: { status: "CONFIRMED", preferredDate: { gte: new Date() } },
-      }),
-      prisma.client.count(),
-      prisma.testimonial.count({ where: { status: "PENDING" } }),
-    ]);
+  const [newEnquiries, upcomingBookings, totalClients] = await Promise.all([
+    prisma.enquiry.count({ where: { status: "NEW" } }),
+    prisma.booking.count({
+      where: { status: "CONFIRMED", preferredDate: { gte: new Date() } },
+    }),
+    prisma.client.count(),
+  ]);
 
-  return { newEnquiries, upcomingBookings, totalClients, pendingTestimonials };
+  return { newEnquiries, upcomingBookings, totalClients };
 }
 
 async function getRecentEnquiries(): Promise<Enquiry[]> {
@@ -69,12 +66,6 @@ export default async function DashboardPage() {
       icon: Users,
       href: "/clients",
     },
-    {
-      label: "Pending Reviews",
-      value: stats.pendingTestimonials,
-      icon: Star,
-      href: "/testimonials-manage",
-    },
   ];
 
   return (
@@ -85,7 +76,7 @@ export default async function DashboardPage() {
       </p>
 
       {/* Stats cards */}
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {statCards.map((stat) => {
           const Icon = stat.icon;
           return (
